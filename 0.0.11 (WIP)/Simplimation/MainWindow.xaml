@@ -1,0 +1,99 @@
+﻿<Window x:Class="Simplimation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Simplimation" Icon="/Simplimation;component/bar.ico" ResizeMode="CanResize" WindowStartupLocation="CenterScreen" ScrollViewer.CanContentScroll="True" HorizontalContentAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalContentAlignment="Center" UseLayoutRounding="False" Width="937.357" Height="666.721">
+    <Grid Background="DarkGray" Grid.IsSharedSizeScope="True" SizeChanged="Grid_SizeChanged">
+        <Grid Name="grid1" Background="Black" MinWidth="480" MinHeight="252" Margin="0,16,0,0" RenderTransformOrigin="0.5,0.5" MaxHeight="600" MaxWidth="800" HorizontalAlignment="Right" VerticalAlignment="Top" Width="327" Height="292">
+            <Grid.RowDefinitions>
+                <RowDefinition MaxHeight="64" />
+                <RowDefinition MaxHeight="720" MinHeight="240" Height="Auto" />
+                <RowDefinition Height="1" MaxHeight="64" MinHeight="64" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MaxWidth="64" MinWidth="64" />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition MaxWidth="64" MinWidth="64" />
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="1" Grid.Row="1" Name="Big" Stretch="Uniform" Source="/Simplimation;component/graphics/nonbut.png" Grid.ColumnSpan="2" />
+            <Image Grid.Column="1" Grid.Row="2" Height="64" HorizontalAlignment="Left" Margin="120,0,0,0" Name="Play_Button" Stretch="Fill" VerticalAlignment="Top" Width="64" Source="/Simplimation;component/graphics/play_i.png" MouseLeftButtonDown="Play_Button_MouseLeftButtonDown" MouseEnter="Play_Button_MouseEnter" MouseLeave="Play_Button_MouseLeave" Grid.ColumnSpan="2" />
+            <Image Height="64" HorizontalAlignment="Left" Margin="42,0,0,0" Name="con_beg" Source="/Simplimation;component/graphics/rev.png" Stretch="Fill" VerticalAlignment="Top" Width="64" Grid.Column="1" Grid.Row="2" MouseLeftButtonDown="con_beg_MouseLeftButtonDown" MouseEnter="con_beg_MouseEnter" MouseLeave="con_beg_MouseLeave" />
+        </Grid>
+        <StatusBar Height="23" Margin="0,435,0,0" Name="statusBar1" VerticalAlignment="Bottom" VerticalContentAlignment="Bottom" />
+        <TabControl HorizontalAlignment="Left" Margin="0,64,0,402" Name="tabControl1" Width="850" Background="#FF787878" Padding="2">
+            <TabItem Header="StoryBoard" Name="tabItem1" Background="Black" BorderBrush="Black" OpacityMask="{x:Null}" Foreground="Black">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition MaxWidth="160" MinWidth="160" Name="cd1" Width="160"></ColumnDefinition>
+                        <ColumnDefinition MaxWidth="160" MinWidth="160" Width="160" />
+                        <ColumnDefinition MaxWidth="160" MinWidth="160" Width="160" />
+                        <ColumnDefinition MaxWidth="160" MinWidth="160" Width="160" />
+                        <ColumnDefinition MaxWidth="160" MinWidth="160" Width="160" />
+                        <ColumnDefinition Width="584*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border BorderBrush="Black" BorderThickness="1" Grid.Column="0" Name="Hi_1"></Border>
+                    <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" Name="Hi_2"></Border>
+                    <Border BorderBrush="Black" BorderThickness="1" Grid.Column="2" Name="Hi_3"></Border>
+                    <Border BorderBrush="Black" BorderThickness="1" Grid.Column="3" Name="Hi_4"></Border>
+                    <Border BorderBrush="Black" BorderThickness="1" Grid.Column="4" Name="Hi_5"></Border>
+
+                    <Image Height="90" HorizontalAlignment="Center" Margin="0,0,0,0" Name="prev1" Stretch="UniformToFill" VerticalAlignment="Top" Width="160" Grid.ColumnSpan="1" Grid.Column="0" Source="/Simplimation;component/graphics/nonbut.png" MouseDown="im_MouseLeftButtonDown" />
+                    <Image Height="90" HorizontalAlignment="Center" Margin="0,0,0,0" Name="prev2" Stretch="UniformToFill" VerticalAlignment="Top" Width="160" Grid.ColumnSpan="1" Grid.Column="1" Source="/Simplimation;component/graphics/nonbut.png" MouseDown="im_MouseLeftButtonDown" />
+                    <Image Height="90" HorizontalAlignment="Center" Margin="0,0,0,0" Name="prev3" Stretch="UniformToFill" VerticalAlignment="Top" Width="160" Grid.ColumnSpan="1" Grid.Column="2" Source="/Simplimation;component/graphics/nonbut.png" MouseDown="im_MouseLeftButtonDown" />
+                    <Image Height="90" HorizontalAlignment="Center" Margin="0,0,0,0" Name="prev4" Stretch="UniformToFill" VerticalAlignment="Top" Width="160" Grid.ColumnSpan="1" Grid.Column="3" Source="/Simplimation;component/graphics/nonbut.png" MouseDown="im_MouseLeftButtonDown" />
+                    <Image Height="90" HorizontalAlignment="Center" Margin="0,0,0,0" Name="prev5" Stretch="UniformToFill" VerticalAlignment="Top" Width="160" Grid.ColumnSpan="1" Grid.Column="4" Source="/Simplimation;component/graphics/nonbut.png" MouseDown="im_MouseLeftButtonDown" />
+                    <Button Content="-&gt;" Grid.Column="5" Height="70" HorizontalAlignment="Right" Name="_adv" VerticalAlignment="Top" Width="40" Foreground="White" BorderBrush="Black" Background="DarkGray" Click="_adv_Click"></Button>
+                    <Button Content="&lt;-" Height="70" HorizontalAlignment="Right" Name="_prev" VerticalAlignment="Top" Width="40" Grid.Column="5" Margin="0,70,0,0" Foreground="White" BorderBrush="Black" Background="DarkGray" Click="_prev_Click"></Button>
+                    <TextBox Height="24" HorizontalAlignment="Left" Margin="65,105,0,0" Name="f1_delay" VerticalAlignment="Top" Width="64" HorizontalContentAlignment="Center" Text="0" TextChanged="delay_TextChanged" />
+                    <Label Content="ms" Height="28" HorizontalAlignment="Center" Margin="120,102,0,0" Name="ms1" VerticalAlignment="Top" DataContext="{Binding}" />
+                    <TextBox Height="24" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="65,105,0,0" Name="f2_delay" Text="0" VerticalAlignment="Top" Width="64" Grid.Column="1" TextChanged="delay_TextChanged" />
+                    <Label Content="ms" DataContext="{Binding}" Height="28" HorizontalAlignment="Center" Margin="120,102,0,0" Name="label1" VerticalAlignment="Top" Grid.Column="1" />
+                    <TextBox Height="24" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="65,105,0,0" Name="f3_delay" Text="0" VerticalAlignment="Top" Width="64" Grid.Column="2" TextChanged="delay_TextChanged" />
+                    <Label Content="ms" DataContext="{Binding}" Height="28" HorizontalAlignment="Center" Margin="120,102,0,0" Name="label2" VerticalAlignment="Top" Grid.Column="2" />
+                    <TextBox Grid.Column="3" Height="24" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="65,105,0,0" Name="f4_delay" Text="0" VerticalAlignment="Top" Width="64" TextChanged="delay_TextChanged" />
+                    <Label Content="ms" DataContext="{Binding}" Grid.Column="3" Height="28" HorizontalAlignment="Center" Margin="120,102,0,0" Name="label3" VerticalAlignment="Top" />
+                    <TextBox Height="24" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="65,105,0,0" Name="f5_delay" Text="0" VerticalAlignment="Top" Width="64" Grid.Column="4" TextChanged="delay_TextChanged" />
+                    <Label Content="ms" DataContext="{Binding}" Height="28" HorizontalAlignment="Center" Margin="120,102,0,0" Name="label4" VerticalAlignment="Top" Grid.Column="4" />
+                    <Label Content="0" Height="28" HorizontalAlignment="Left" Margin="20,105,0,0" Name="slot1_fn" VerticalAlignment="Top" FontWeight="Bold" FontStretch="Normal" Grid.Column="0" />
+                    <Label Content="1" Height="28" HorizontalAlignment="Left" Margin="20,105,0,0" Name="slot2_fn" VerticalAlignment="Top" FontWeight="Bold" FontStretch="Normal" Grid.Column="1" />
+                    <Label Content="2" Height="28" HorizontalAlignment="Left" Margin="20,105,0,0" Name="slot3_fn" VerticalAlignment="Top" FontWeight="Bold" FontStretch="Normal" Grid.Column="2" />
+                    <Label Content="3" Height="28" HorizontalAlignment="Left" Margin="20,105,0,0" Name="slot4_fn" VerticalAlignment="Top" FontWeight="Bold" FontStretch="Normal" Grid.Column="3" />
+                    <Label Content="4" Height="28" HorizontalAlignment="Left" Margin="20,105,0,0" Name="slot5_fn" VerticalAlignment="Top" FontWeight="Bold" FontStretch="Normal" Grid.Column="4" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Image Height="64" HorizontalAlignment="Left" Margin="12,40,0,0" Name="Add_it" VerticalAlignment="Top" Width="64" MouseLeftButtonDown="Add_Click" Source="/Simplimation;component/graphics/new_image.png" MouseEnter="Add_it_MouseEnter" MouseLeave="Add_it_MouseLeave" />
+        <Border BorderBrush="Silver" BorderThickness="2" Height="64" HorizontalAlignment="Left" Margin="12,40,0,0" Name="border1" VerticalAlignment="Top" Width="64" />
+        <Image Height="64" HorizontalAlignment="Left" Margin="77,40,0,0" Name="rem" Source="/Simplimation;component/graphics/rem.png" VerticalAlignment="Top" Width="64" MouseEnter="rem_it_MouseEnter" MouseLeave="rem_it_MouseLeave" MouseLeftButtonDown="rem_MouseLeftButtonDown" />
+        <Border BorderBrush="Silver" BorderThickness="2" Height="64" HorizontalAlignment="Left" Margin="77,40,0,0" Name="border2" VerticalAlignment="Top" Width="64" />
+        <Menu Height="16" Margin="0,0,-238,0" Name="MainMenu" VerticalAlignment="Top" MinWidth="1920" Width="1920" VerticalContentAlignment="Top" HorizontalAlignment="Left">
+            <MenuItem Header="File" Name="F_Menu">
+                <MenuItem Header="Import Images" />
+                <MenuItem Header="Exit" />
+            </MenuItem>
+            <MenuItem Header="Edit" Name="E_Menu" >
+                <MenuItem Header="Remove Selected Frame(s)"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Settings" Name="S_Menu" />
+            <MenuItem Header="About" Name="About" />
+        </Menu>
+        <ItemsControl ItemsSource="{Binding MyCollection}">
+        <!-- ItemsPanelTemplate -->
+        <ItemsControl.ItemsPanel>
+            <ItemsPanelTemplate>
+                    <WrapPanel></WrapPanel>
+                </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+
+        <!-- ItemTemplate -->
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+                    <Image Height="90" HorizontalAlignment="Center" Margin="0,0,0,0" Name="prev1" Stretch="UniformToFill" VerticalAlignment="Top" Width="160" Grid.ColumnSpan="1" Grid.Column="0" Source="/Simplimation;component/graphics/nonbut.png" MouseDown="im_MouseLeftButtonDown" />
+                </DataTemplate>
+        </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+
+    </Grid>
+</Window>

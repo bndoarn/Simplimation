@@ -1,0 +1,11 @@
+c:\users\sunshine\documents\visual studio 2010\Projects\Simplimation\Simplimation\bin\Debug\Simplimation.exe
+c:\users\sunshine\documents\visual studio 2010\Projects\Simplimation\Simplimation\bin\Debug\Simplimation.pdb
+c:\users\sunshine\documents\visual studio 2010\Projects\Simplimation\Simplimation\obj\x86\Debug\App.g.cs
+c:\users\sunshine\documents\visual studio 2010\Projects\Simplimation\Simplimation\obj\x86\Debug\Simplimation_MarkupCompile.cache
+c:\users\sunshine\documents\visual studio 2010\Projects\Simplimation\Simplimation\obj\x86\Debug\Simplimation.g.resources
+c:\users\sunshine\documents\visual studio 2010\Projects\Simplimation\Simplimation\obj\x86\Debug\Simplimation.Properties.Resources.resources
+c:\users\sunshine\documents\visual studio 2010\Projects\Simplimation\Simplimation\obj\x86\Debug\Simplimation.csproj.GenerateResource.Cache
+c:\users\sunshine\documents\visual studio 2010\Projects\Simplimation\Simplimation\obj\x86\Debug\Simplimation.exe
+c:\users\sunshine\documents\visual studio 2010\Projects\Simplimation\Simplimation\obj\x86\Debug\Simplimation.pdb
+c:\users\sunshine\documents\visual studio 2010\Projects\Simplimation\Simplimation\obj\x86\Debug\MainWindow.baml
+c:\users\sunshine\documents\visual studio 2010\Projects\Simplimation\Simplimation\obj\x86\Debug\MainWindow.g.cs
